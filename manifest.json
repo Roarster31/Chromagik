@@ -1,0 +1,24 @@
+{
+  "name": "Chromagik",
+  "version": "1.0",
+  "description": "Fixes Chromatik",
+  "icons": { "300": "icon.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.chromatik.com/*"],
+      "js": ["jquery-2.2.4.min.js", "fix.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "cookies",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "manifest_version": 2
+}
